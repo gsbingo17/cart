@@ -1,6 +1,8 @@
 # Briefing
 This repo is to demonstrate how to use tool to create the order service using OpenAPI and Cloud Firestore.
 
+This demo includes calling the tool via the OpenAPI specification from the agent to create an order, returning the order ID, and persisting the order data in Cloud Firestore.
+
 # prepare the environment
 
 - Create a GCE instance to deploy the order service.
@@ -22,7 +24,7 @@ python3 app.py
  * Running on http://10.0.0.8:8080
 ```
 
-# Create the tool in the agent builder
+# Create the tool in the [agent builder](https://cloud.google.com/products/agent-builder?hl=en)
 
 - name: food_order
 - Type: OpenAPI
