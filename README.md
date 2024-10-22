@@ -3,7 +3,7 @@ This repo is to demonstrate how to use tool to create the order service using Op
 
 This demo includes calling the tool via the OpenAPI specification from the agent to create an order, returning the order ID, and persisting the order data in Cloud Firestore.
 
-# prepare the environment
+# Prepare the environment and deploy and start the service
 
 - Create a GCE instance to deploy the order service.
 - Install the packages.
@@ -89,7 +89,7 @@ paths:
 - Authentication type: Service agent token
 - Service agent auth type: ID token
 
-# Create the Agent and provide the Agent Instructions
+# Create the Agent and provide the Agent Instructions to use the tool
 ```
 - Use ${TOOL:food_order} to help users purchase items,return the order id.
 ```
