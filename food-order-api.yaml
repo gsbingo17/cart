@@ -1,0 +1,48 @@
+openapi: 3.0.0
+info:
+  title: Order API
+  version: 1.0.0
+servers:
+  - url: 'http://34.29.43.105:8080'
+paths:
+  /orders:
+    post:
+      summary: Create a new order
+      operationId: createOrder
+      description: Creates a new order with a list of items.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  minItems: 1
+                  maxItems: 10
+                  uniqueItems: true
+                  items:
+                    type: object
+                    properties:
+                      product:
+                        type: string
+                        description: Name of the product.
+                      quantity:
+                        type: integer
+                        description: Quantity of the product.
+      responses:
+        '201':
+          description: Order created successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  order_id:
+                    type: string
+                    description: Unique identifier of the created order. 
+        '400':
+          description: Bad Request - Invalid input data.
+        '500':
+          description: Internal Server Error.
