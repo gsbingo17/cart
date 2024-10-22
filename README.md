@@ -89,7 +89,7 @@ paths:
 - Authentication type: Service agent token
 - Service agent auth type: ID token
 
-# Agent Instructions
+# Create the Agent and provide the Agent Instructions
 ```
 - Use ${TOOL:food_order} to help users purchase items,return the order id.
 ```
